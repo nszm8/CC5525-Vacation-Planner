@@ -1,0 +1,69 @@
+var registrationModel = require('./registrationModel');
+var key = '1633556616336264';
+var encryptor = require('simple-encryptor')(key);
+
+module.exports.createRegistrationDBService = (registrationDetails) => {
+
+
+   return new Promise(function myFunction(resolve, reject) {
+
+       var registrationModelData = new registrationModel();
+
+       registrationModelData.firstname = registrationDetails.firstname;
+       registrationModelData.lastname = registrationDetails.lastname;
+       registrationModelData.email = registrationDetails.email;
+       registrationModelData.password = registrationDetails.password;
+       var encrypted = encryptor.encrypt(registrationDetails.password);
+       registrationModelData.password = encrypted;
+
+       registrationModelData.save(function resultHandle(error, result) {
+
+           if (error) {
+                console.log(error)
+               reject(false);
+           } else {
+               resolve(true);
+           }
+       });
+
+   });
+
+}
+
+module.exports.loginuserDBService = (registrationDetails)=>
+{
+   return new Promise(function myFn(resolve, reject)
+   {
+    registrationModel.findOne({ email: registrationDetails.email},function getresult(errorvalue, result)
+      {
+         if(errorvalue)
+         {
+            reject({status: false, msg: "Invaild Data"});
+         }
+         else
+         {
+            console.log(result)
+            if(result !=undefined &&  result !=null)
+            {
+               var decrypted = encryptor.decrypt(result.password);
+ 
+               if(decrypted== registrationDetails.password)
+               {
+                  resolve({status: true,msg: "User Validated Successfully"});
+               }
+               else
+               {
+                  reject({status: false,msg: "User Validated failed"});
+               }
+            }
+            else
+            {
+               reject({status: false,msg: "User Error Details"});
+            }
+ 
+         }
+      
+      });
+      
+   });
+}
