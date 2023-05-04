@@ -26,7 +26,7 @@ export class LoginComponent {
       password: this.password,
     };
 
-        this.http.post("http://localhost:9994/user/login", bodyData).subscribe(  (resultData: any) => {
+        this.http.post("http://localhost:9993/user/login", bodyData).subscribe(  (resultData: any) => {
         console.log(resultData);
 
         if (resultData.status)
