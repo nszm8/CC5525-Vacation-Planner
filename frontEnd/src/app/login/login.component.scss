@@ -1,0 +1,36 @@
+.card{
+  border: none;
+  width: 500px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: hsla(205,46%,30%,1);
+  background: linear-gradient(90deg, rgb(213, 189, 177)0%,rgb(205, 186, 173)100%);
+}
+
+.card h1,
+h6{
+  color: white;
+  label{
+  color: white;
+  }
+
+}
+
+.container{
+  background-image: url('../../assets/images/logo.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 100%;
+  min-height: 200%;
+}
+.label {
+  color: white;
+  padding: 8px;
+}
+
+
+
+
