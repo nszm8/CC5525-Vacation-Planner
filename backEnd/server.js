@@ -29,7 +29,7 @@ app.listen(9993,function check(err)
     console.log("started")
 });
 
-mongoose.connect("mongodb://localhost:27017/CloudProject",{useNewUrlParser: true,  useUnifiedTopology: true },
+mongoose.connect("mongodb+srv://cc-user:Cloud19@cluster0.o4gjm7u.mongodb.net/CloudProject",{useNewUrlParser: true,  useUnifiedTopology: true },
 function checkDatabase(error)
 {
     if(error)
