@@ -30,7 +30,7 @@ export class RegisterComponent {
       "email" : this.email,
       "password" : this.password,
     };
-    this.http.post("http://localhost:9993/registration/create",bodyData).subscribe((resultData: any)=>
+    this.http.post("https://vacationplanner-server-deploy.herokuapp.com/registration/create",bodyData).subscribe((resultData: any)=>
     {
         console.log(resultData);
         alert("User Registered Successfully")

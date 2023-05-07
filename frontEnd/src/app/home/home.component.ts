@@ -12,6 +12,8 @@ export class HomeComponent {
 
   numberOfDays: number = 0;
   destination: string = '';
+  vactionPlans: any;
+  vacationActivities: any;
 
   constructor(private router: Router,private http: HttpClient) {}
 
@@ -28,8 +30,9 @@ export class HomeComponent {
       this.http.get('https://ai-trip-planner.p.rapidapi.com/', {
 				headers: headers, params: params
 			})
-			.subscribe(data => {
-				console.log(data);
+			.subscribe((data: any) => {
+        this.vactionPlans = data.plan;
+				console.log(this.vactionPlans);
 			});
     }
 }
