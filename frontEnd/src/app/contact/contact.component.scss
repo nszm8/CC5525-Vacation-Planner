@@ -28,3 +28,199 @@ nav ul li a{
   color: #fff;
   text-decoration: none;
 }
+
+html{
+  scroll-padding-top:3rem;
+  scroll-behavior: smooth;
+}
+
+.title{
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.h1 > h3{
+  font-family:Arial, Helvetica, sans-serif ;
+}
+.right{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0.4;
+}
+.right >a{
+  text-decoration: none;
+  color: black;
+  margin: 0 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: 0.3s;
+}
+.right >a:hover{
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.team{
+  margin-top: 25px;
+  padding: 20px 0;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.team >h4{
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.mem{
+  margin: 20px 0;
+  height:auto ;
+  display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.memname{
+  display: flex;
+  align-items: center;
+  width: 270px;
+  height: 70px;
+  margin: 15px 10px;
+  cursor: pointer;
+
+}
+.memleft{
+  height: 70px;
+  width: 70px;
+  background-color:rgb(234, 226, 226);
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.memright{
+  text-align: center;
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: center;
+text-transform: uppercase;
+letter-spacing: 2px;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 500;
+height: 100%;
+width: 300px;
+padding: 5px 10px;
+border-radius: 10px;
+background-color: white;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+transition:0.3s ;
+}
+.memright:hover{
+  scale: 1.1;
+}
+.memright >p{
+ font-size: 12.5px;
+ margin: 4px 0;
+ line-height:1.2rem;
+}
+span{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+.id{
+  font-weight: bold;
+}
+.Group{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  
+}
+.g{
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-right: 15px;
+}
+.protitle{
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight:300;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.About{
+ padding: 20px 0;
+ display: flex;
+ align-items:center ;
+ justify-content: center;
+ flex-direction: column;
+}
+.abou > p{
+text-transform: uppercase;
+font-size: 20px;
+letter-spacing: 2px;
+font-weight: 600;
+font-family: Arial, Helvetica, sans-serif;
+margin: 20px 0;
+}
+.about_content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;  
+  margin-top: 20px;
+}
+.ableft{
+  flex: 0.5;
+  height:100%;
+}
+.abright{
+  flex: 0.5;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+  padding: 15px 20px;  
+}
+.abright >p{
+  text-align: justify;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-left: 15px;
+  line-height: 2rem;
+  font-size: 0.9rem;
+}
+img{
+  width: 100%;
+ 
+}
+@media screen and (width < 890px) {
+  .about_content{
+      flex-direction: column;
+  }
+  .team{
+      height: 80%;
+  }
+}
+

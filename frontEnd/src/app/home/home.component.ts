@@ -12,7 +12,7 @@ export class HomeComponent {
 
   numberOfDays: number = 0;
   destination: string = '';
-  vactionPlans: any;
+  vactionPlans: any[] = [];
   vacationActivities: any;
 
   constructor(private router: Router,private http: HttpClient) {}
@@ -31,7 +31,16 @@ export class HomeComponent {
 				headers: headers, params: params
 			})
 			.subscribe((data: any) => {
-        this.vactionPlans = data.plan;
+        var row=0;
+        for(var i=0; i<data.plan.length; i++){
+            for(var j=0;j<data.plan[i].activities.length; j++){
+              var json ={day:String, time: String, description:String};
+              json.day = data.plan[i].day;
+              json.time = data.plan[i].activities[j].time;
+              json.description = data.plan[i].activities[j].description;
+              this.vactionPlans.push(json);
+            }
+        }
 				console.log(this.vactionPlans);
 			});
     }

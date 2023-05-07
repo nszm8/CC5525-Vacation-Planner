@@ -1,15 +1,17 @@
 *{
-
+  scroll-padding-top:3rem;
+  scroll-behavior: smooth;
   font-family: 'Roboto', sans-serif;
 }
 .container{
   background-image: url('../../assets/images/logo.png');
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed !important;
   background-size: 100% 100%;
   max-width: 100% !important;
   max-height: 100% !important;
-  height: 100vh
+  height: 100vh;
+  overflow-x: scroll;
 }
 nav{
   width:100%;
