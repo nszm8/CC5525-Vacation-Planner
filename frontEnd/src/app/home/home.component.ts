@@ -14,6 +14,7 @@ export class HomeComponent {
   destination: string = '';
   vactionPlans: any[] = [];
   vacationActivities: any;
+  showTable: boolean = false;
 
   constructor(private router: Router,private http: HttpClient) {}
 
@@ -32,6 +33,7 @@ export class HomeComponent {
 			})
 			.subscribe((data: any) => {
         var row=0;
+        this.vactionPlans = [];
         for(var i=0; i<data.plan.length; i++){
             for(var j=0;j<data.plan[i].activities.length; j++){
               var json ={day:String, time: String, description:String};
@@ -41,6 +43,15 @@ export class HomeComponent {
               this.vactionPlans.push(json);
             }
         }
+
+        if(data.plan.length >0){
+          this.showTable = true;
+        }
+        else{
+          this.showTable = false;
+        }
+
+        
 				console.log(this.vactionPlans);
 			});
     }

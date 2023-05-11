@@ -24,7 +24,7 @@
           <input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" class="form-control" id="fee" >
         </div>
 
-      <button type="submit" class="btn btn-primary mt-4" (click)="save()" >Register</button>
+      <button type="submit" class="btn btn-primary mt-4" routerLink="/login" (click)="save()" >Register</button>
 
     </form>
     <a style="color: white; margin-top: 10px" routerLink="/login">Already registered? Click here to login!!</a>

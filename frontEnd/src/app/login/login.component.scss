@@ -7,15 +7,20 @@
   left: 50%;
   transform: translate(-50%,-50%);
   background: hsla(205,46%,30%,1);
-  background: linear-gradient(90deg, rgb(213, 189, 177)0%,rgb(205, 186, 173)100%);
+  background: linear-gradient(90deg, rgb(101, 128, 140)0%,rgb(108, 191, 230)100%);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+ 
 }
 
 .card h1,
 h6{
-  color: white;
+  color: black;
   label{
-  color: white;
+  color: black;
   }
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  
 
 }
 

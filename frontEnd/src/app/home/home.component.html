@@ -11,22 +11,33 @@
       </ul>
     </nav>
     <div>
-      <h1 style="font-family: Apple Chancery, cursive; ">Beautiful <br> Places to Explore..</h1>
-      <p style="font-family: Apple Chancery, cursive; font-size: 20px;">Close your eyes and imagine being in a place you’ve always wanted to visit. What if you could make that dream a reality? Knowing how to plan and use travel websites can help make a dream trip possible.</p>
+      <h1 style="font-weight: bold; font-family: Apple Chancery, cursive;">Beautiful <br> Places to Explore..</h1>
+      <p style="font-size: 25px; font-family: Apple Chancery, cursive; font-weight: 800;">Close your eyes and imagine being in a place you’ve always wanted to visit. What if you could make that dream a reality? Knowing how to plan and use travel websites can help make a dream trip possible.</p>
       <form>
-        <input type="text" placeholder="Country name">
-        <input type="text" [(ngModel)]="destination" [ngModelOptions]="{standalone: true}"placeholder="City">
-        <input type="text" [(ngModel)]="numberOfDays" [ngModelOptions]="{standalone: true}"placeholder="Number of Days">
+        <div class="row g-3">
+          <div class="col">
+        <input type="text" class="form-control" placeholder="Country name"> 
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" [(ngModel)]="destination" [ngModelOptions]="{standalone: true}"placeholder="City">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" [(ngModel)]="numberOfDays" [ngModelOptions]="{standalone: true}"placeholder="Number of Days">
+        </div>
+      </div>
+        <br><br> 
+
         <button href = "#table" type="submit" class="btn" (click)="vacationDetails()">Search</button>
       </form>
     </div>
-      <div class="container">
-        <table class="table table-bordered table-striped">
+    <br>
+      <div *ngIf = "showTable" class="container">
+        <table style="background-color: Lightblue" class="table table-bordered table-striped">
           <thead>
           <tr>
-            <th>Day</th>
-            <th>Time</th>
-            <th>Activities</th>
+            <th style="color: black">Day</th>
+            <th style="color: black">Time</th>
+            <th style="color: black">Activities</th>
           </tr>
           </thead>
           <tbody>
